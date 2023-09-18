@@ -122,7 +122,7 @@
                             <div class="border shadow-sm p-3 rounded-2 position-relative">
                                 <img *ngIf="prodItem.skuImage === ''" src="/assets/img/icons/no-picture.jpg"
                                     class="img-fluid" alt="no product image">
-                                <img *ngIf="prodItem.skuImage !== ''" [src]="'https://www.unifycloud.in/'+prodItem.skuImage" class="img-fluid"
+                                <img *ngIf="prodItem.skuImage !== ''" [src]="prodItem.skuImage" class="img-fluid"
                                     alt="{{prodItem.skuTitle}} for {{prodItem.segmentName}}">
                                 <span *ngIf="prodItem.discountType!==''" class="dscOff">
                                     <i *ngIf="prodItem.discountType==='Fixed'"
