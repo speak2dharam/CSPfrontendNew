@@ -1,0 +1,44 @@
+<section class="px-3 py-2 border-bottom bg-white">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 pb-0">
+                  <li class="breadcrumb-item"><a routerLink="/admin/dashboard" class="text-dark">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Enquiry</li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+</section>
+<section class="px-3 py-2">
+    <div class="row justify-content-between align-items-center">
+        <div class="col">
+            <h3 class="fw-bold h5">Enquiry  <span class="fw-light">| Manage Enquiry</span></h3>
+        </div>
+        <div class="col text-end">
+            <button class="btn btn-sm btn-outline-dark">Refresh&nbsp;<i class="icofont-refresh"></i></button>
+            <!-- <a href="" class="btn btn-sm btn-secondary">Refresh&nbsp;<i class="icofont-refresh"></i></a> -->
+        </div>
+    </div>
+</section>
+<section class="px-3 py-2">
+    <div class="row">
+        <div class="col-4 border-end">
+            <div class="enqLeftDiv pe-2" style="height: calc(100vh - 160px); overflow-y: auto;">
+                <div *ngFor="let enqry of enqries">
+                    <div [class.enqSeen]="enqry.hasSeen === 'True'" class="position-relative enqItems border-top py-3">
+                        <h5>{{enqry.fullName}}</h5>
+                        <h6 class="mb-0">{{enqry.emailID}}</h6>
+                        <span class="position-absolute end-0 badge">{{enqry.addedOn}}</span>
+                        <a (click)="callChildFunction(enqry.eid)" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-white h-100 p-3 rounded shadow" style="height: calc(100vh - 160px); overflow-y: auto;">
+                <app-enquiry-single [inputValue]="CountEnq"></app-enquiry-single>
+            </div>
+        </div>
+    </div>
+</section>

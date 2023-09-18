@@ -1,0 +1,65 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="ProductID" formControlName="ProductID"
+                    placeholder="name@example.com">
+                <label for="ProductID">Product ID</label>
+            </div>
+            <div *ngIf="myForm.controls['ProductID'].invalid && myForm.controls['ProductID'].touched" class="error">
+                Product ID is required.
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="ProductTitle" formControlName="ProductTitle"
+                    placeholder="name@example.com">
+                <label for="ProductTitle">Product Title</label>
+            </div>
+            <div *ngIf="myForm.controls['ProductTitle'].invalid && myForm.controls['ProductTitle'].touched" class="error">
+                Product Title is required.
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="ProductDescription"
+                    formControlName="ProductDescription"></textarea>
+                <label for="ProductDescription">Product Description</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <select class="form-select" id="ProductCategory" formControlName="ProductCategory"
+                    aria-label="Floating label select example">
+                    <option value="" selected>--Select Product Category--</option>
+                    <option *ngFor="let prdCat of ProdCatgryOutput" value="{{prdCat.categoryID}}">{{prdCat.categoryName}}</option>
+                </select>
+                <label for="ProductCategory">Product Category</label>
+            </div>
+            <div *ngIf="myForm.controls['ProductCategory'].invalid && myForm.controls['ProductCategory'].touched" class="error">
+                Select product category.
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <select class="form-select" formControlName="ProdPublisher" id="ProdPublisher"
+                    aria-label="Floating label select example">
+                    <option value="" selected>--Select Publisher--</option>
+                    <option *ngFor="let publisher of publishers" value="{{ publisher.PublisherID }}">{{ publisher.PublisherName }}</option>
+                </select>
+                <label for="ProdPublisher">Product Publisher</label>
+            </div>
+            <div *ngIf="myForm.controls['ProdPublisher'].invalid && myForm.controls['ProdPublisher'].touched" class="error">
+                Select publisher.
+            </div>
+        </div>
+        <div class="col-12 text-center">
+            <button *ngIf="!isLoading" type="submit" [disabled]="!myForm.valid" class="btn btn-info shadow-sm">Add Product
+            </button>
+            <button *ngIf="isLoading" class="btn btn-info" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Processing...
+            </button>
+        </div>
+    </div>
+</form>

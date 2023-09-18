@@ -1,0 +1,19 @@
+﻿@media(max-width:768px) {
+    .navbar-brand img {
+        height: 35px;
+    }
+
+    .carousel-caption {
+        padding-top: 40%;
+    }
+
+    .loginBox {
+        right: 3%;
+        top: 15%;
+        width: 94%;
+    }
+    .navbar-collapse {
+        background-color: #fff;
+        padding: 0 10px;
+    }
+}

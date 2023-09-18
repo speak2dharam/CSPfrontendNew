@@ -1,0 +1,28 @@
+﻿body {
+    background-color: #f4f4f4;
+    background-image:url(../img/login/loginfoot2.png);
+    background-repeat:no-repeat;
+    background-size:100% 50px;
+    background-position:bottom center;
+    /*background:url(../img/login/1.jpg) no-repeat center center;
+    background-size:cover;*/
+}
+.log2row{
+    height:100vh;
+    padding-bottom:60px;
+}
+.leftBox {
+    position: relative;
+    /*background: #000f57;*/
+    background: #f2f2f2;
+}
+.hero-shape {
+    bottom: 0;
+    width: 70%;
+}
+.loginfoot{
+    color:#555;
+}
+.hero-shape2 {
+    width: 45%;
+}

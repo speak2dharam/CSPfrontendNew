@@ -1,0 +1,69 @@
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="ProductID" formControlName="FullName"
+                    placeholder="name@example.com">
+                <label for="ProductID">Full Name</label>
+            </div>
+            
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" formControlName="CompanyName" id="CompanyName" placeholder="name@example.com">
+                <label for="CompanyName">Company Name</label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating">
+                <select class="form-select" formControlName="StateName" id="StateName" (change)="onStateChange($event)" aria-label="Floating label select example">
+                    <option value="">- Select State -</option>
+                    <option *ngFor="let stateName of getStateOutPut" [value]="stateName.stateCode">{{stateName.stateName}}</option>
+                </select>
+                <label for="StateName">State<sup class="text-danger">*</sup></label>
+            </div>
+            <div *ngIf="addressForm.controls['StateName'].invalid && addressForm.controls['StateName'].touched" class="error">
+                State is required.
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating">
+                <select class="form-select" formControlName="CityName" id="CityName" aria-label="Floating label select example">
+                    <option value="">- Select City -</option>
+                    <option *ngFor="let cityName of getcityOutPut" [value]="cityName.cityCode">{{cityName.cityName}}</option>
+                </select>
+                <label for="CityName">City<sup class="text-danger">*</sup></label>
+            </div>
+            <div *ngIf="addressForm.controls['CityName'].invalid && addressForm.controls['CityName'].touched" class="error">
+                City is required.
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating">
+                <input type="text" class="form-control" maxlength="6" formControlName="Pincode" id="Pincode" placeholder="name@example.com">
+                <label for="Pincode">Pincode<sup class="text-danger">*</sup></label>
+            </div>
+            <div *ngIf="addressForm.controls['Pincode'].invalid && addressForm.controls['Pincode'].touched" class="error">
+                Pincode is required.
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" formControlName="AddressLine1" id="AddressLine1"></textarea>
+                <label for="AddressLine1">Address Line 1<sup class="text-danger">*</sup></label>
+            </div>
+            <div *ngIf="addressForm.controls['AddressLine1'].invalid && addressForm.controls['AddressLine1'].touched" class="error">
+                Address line 1 is required.
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" formControlName="AddressLine2" id="AddressLine2"></textarea>
+                <label for="AddressLine2">Address Line 2</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-warning btn-sm">Use this billing address</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,8 @@
+<main>
+    <app-top-bar (sideBarToggled)="sideNavStatus=$event;"></app-top-bar>
+    <app-side-bar [sideNavStatus]="sideNavStatus"></app-side-bar>
+    <section class="mainContner" [ngClass]="{'mainAreaShrink':sideNavStatus}">
+        <router-outlet></router-outlet>
+    </section>
+    
+</main>

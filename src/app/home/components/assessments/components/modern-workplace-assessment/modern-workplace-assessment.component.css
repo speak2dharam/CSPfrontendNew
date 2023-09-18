@@ -1,0 +1,10 @@
+.vdesktopsctn{
+    /* background: url(../../../../../../assets/img/graphBg.jpg) cover no-repeat bottom right; */
+    /* background-image: url(/assets/img/graphBg.jpg); */
+    background-size: cover;
+    background-position: right bottom;
+    background-color: #161342;
+}
+.blsctn{
+    background: linear-gradient(269.94deg, #011788 10.47%, #00126B 99.97%);
+}

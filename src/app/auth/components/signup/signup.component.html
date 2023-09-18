@@ -1,0 +1,150 @@
+<section class="logSctn">
+    <div class="container">
+        <div class="row justify-content-center log2row d-flex align-items-center">
+            <div class="col-md-7">
+                <a routerLink="" class="d-inline-block mb-2 text-dark"><i class="icofont-arrow-left"></i> &nbsp;Back to home</a>
+                <div class="shadow-sm border">
+                    <div class="row g-0">
+                        <div class="col-md-4 leftBox overflow-hidden border-end">
+                            <img src="assets/img/login-left.png" class="position-absolute start-0 hero-shape zindex--1" />
+                            <img src="assets/img/login-right.png" class="position-absolute end-0 hero-shape2 zindex--1 bottom-0" />
+                            <div class="p-4">
+                                <!--<img src="assets/img/logo-white.png" style="height:25px;" />-->
+                                <img src="/assets/img/unifycloudlogo.svg" style="height:35px;" />
+                            </div>
+                        </div>
+                        <div class="col-md-8 bg-white">
+                            <div class="p-4">
+                                <div class="mb-3">
+                                    <h3 class="fw-light mb-0">Sign Up</h3>
+                                    <p>sign up to access Unifycloud</p>
+                                </div>
+                                <div *ngIf="onsuccess">
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong>Sign up successfully,</strong> please check you registered email id to verify your email.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <form [formGroup]="signupForm" (ngSubmit)="signupfn()">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="">
+                                                <label for="firstname" class="form-label">First Name</label>
+                                                <input type="text" formControlName="firstname" [ngClass]="{'is-invalid':submitted && signupForm.controls['firstname'].errors}" class="form-control" id="firstname" placeholder="First Name">
+                                            </div>
+                                            <div *ngIf="submitted && signupForm.controls['firstname'].errors" class="text-danger">
+                                                <div *ngIf="submitted && signupForm.controls['firstname'].errors['required']">
+                                                    <small>First name is required</small>
+                                                </div>
+                                                <div *ngIf="submitted && signupForm.controls['firstname'].errors['minlength']">
+                                                    <small>Minimum length should be 2</small> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="">
+                                                <label for="lastname" class="form-label">Last Name</label>
+                                                <input type="text" formControlName="lastname" [ngClass]="{'is-invalid':submitted && signupForm.controls['lastname'].errors}" class="form-control" id="lastname" placeholder="Last Name">
+                                            </div>
+                                            <div *ngIf="submitted && signupForm.controls['lastname'].errors" class="text-danger">
+                                                <div *ngIf="submitted && signupForm.controls['lastname'].errors['required']">
+                                                    <small>Last name is required</small>
+                                                </div>
+                                                <div *ngIf="submitted && signupForm.controls['lastname'].errors['minlength']">
+                                                    <small>Minimum length should be 2</small> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input type="email" formControlName="email" [ngClass]="{'is-invalid':submitted && signupForm.controls['email'].errors}" class="form-control" id="email" placeholder="Email">
+                                            </div>
+                                            <div *ngIf="submitted && signupForm.controls['email'].errors" class="text-danger">
+                                                <div *ngIf="submitted && signupForm.controls['email'].errors['required']">
+                                                    <small>Email is required</small>
+                                                </div>
+                                                <div *ngIf="submitted && signupForm.controls['email'].errors['email']">
+                                                    <small>Enter valid email</small> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="">
+                                                <label for="mobile" class="form-label">Mobile</label>
+                                                <input type="number" formControlName="mobile" [ngClass]="{'is-invalid':submitted && signupForm.controls['mobile'].errors}" class="form-control" id="mobile" placeholder="Mobile">
+                                            </div>
+                                            <div *ngIf="submitted && signupForm.controls['mobile'].errors" class="text-danger">
+                                                <div *ngIf="submitted && signupForm.controls['mobile'].errors['required']">
+                                                    <small>Mobile is required</small>
+                                                </div>
+                                                <div *ngIf="submitted && signupForm.controls['mobile'].errors['minlength']">
+                                                    <small>Minimum length should be 10</small> 
+                                                </div>
+                                                <div *ngIf="submitted && signupForm.controls['mobile'].errors['maxlength']">
+                                                    <small>Maximum length should be 10</small> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="">
+                                                <label for="password" class="form-label">Password</label>
+                                                <input type="password" formControlName="password" [ngClass]="{'is-invalid':submitted && signupForm.controls['password'].errors}" class="form-control" id="password" placeholder="Password">
+                                            </div>
+                                            <div *ngIf="submitted && signupForm.controls['password'].errors" class="text-danger">
+                                                <div *ngIf="submitted && signupForm.controls['password'].errors['required']">
+                                                    <small>Password is required</small>
+                                                </div>
+                                                <div *ngIf="submitted && signupForm.controls['password'].errors['minlength']">
+                                                    <small>Minimum length should be 8</small> 
+                                                </div>
+                                                <div *ngIf="submitted && signupForm.controls['password'].errors['maxlength']">
+                                                    <small>Minimum length should be 20</small> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="">
+                                                <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                                                <input type="password" formControlName="confirmpassword" [ngClass]="{'is-invalid':submitted && signupForm.controls['confirmpassword'].errors}" class="form-control" id="ConfirmPassword" placeholder="Confirm Password">
+                                            </div>
+                                            <div *ngIf="submitted && signupForm.controls['confirmpassword'].errors" class="text-danger">
+                                                <div *ngIf="submitted && signupForm.controls['confirmpassword'].errors['required']">
+                                                    <small>Confirm password is required</small>
+                                                </div>
+                                                <div *ngIf="submitted && signupForm.controls['confirmpassword'].errors['minlength']">
+                                                    <small>Minimum length should be 8</small> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="ucBtn btn btn-primary w-100">Sign up</button>
+                                            <!-- <a href="#" class="fw-bold d-inline-block mt-2">Forgot Password?</a> -->
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center mt-4 loginfoot">
+                    <!-- <button (click)="myFunction()">Click me</button> -->
+                    <p class="mb-1">Already having Unify account? <a routerLink="/auth/login">Login Now</a></p>
+                    <p class="mb-0" style="color: #868686;"><small>© 2023, The Unified Cloud Pvt. Ltd. All Rights Reserved. ({{appVersion}})</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div  class="fpLoader" *ngIf="showloader">
+    <div>
+        <div class="d-flex justify-content-center p-2">
+            <div class="spinner-border text-white" style="width: 5rem; height: 5rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <span class="text-white fw-normal">Please wait...</span>
+    </div>
+</div>

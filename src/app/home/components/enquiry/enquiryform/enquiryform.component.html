@@ -1,0 +1,186 @@
+<form *ngIf="!HasEnquired" [formGroup]="AddEnqForm" (ngSubmit)="submitEnquery()" class="position-relative">
+    <div *ngIf="Lodr" class="position-absolute top-0 start-0 bottom-0 end-0" style="z-index: 1;">
+        <div class="row d-flex align-items-center bg-white bg-opacity-75" style="height: 100%;">
+            <div class="col-12 text-center">
+                <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h6>
+        <p>Fill out the form to be connected to one of our experts.</p>
+    </h6>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="ErrrMsg">
+        <strong>Error!</strong> please enter mendatory fields.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <div class="row g-3 enqfrm">
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="fullName"
+                    placeholder="Full Name" formControlName="fullName">
+                <label for="fullName">Full Name<sup class="text-danger">*</sup></label>
+            </div>
+            <div class="text-danger" *ngIf="FullName.errors?.['required'] && (FullName.dirty || FullName.touched)">
+                Field is required
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="companyName"
+                    placeholder="Company Name" formControlName="companyName">
+                <label for="companyName">Company Name<sup class="text-danger">*</sup></label>
+            </div>
+            <div class="text-danger" *ngIf="CompanyName.errors?.['required'] && (CompanyName.dirty || CompanyName.touched)">
+                Field is required
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="email" class="form-control" id="emailID"
+                    placeholder="name@example.com" formControlName="emailID">
+                <label for="emailID">Email address<sup class="text-danger">*</sup></label>
+            </div>
+            <div class="text-danger" *ngIf="EmailID.errors?.['required'] && (EmailID.dirty || EmailID.touched)">
+                Field is required
+            </div>
+            <div class="text-danger" *ngIf="EmailID.errors?.['email'] && (EmailID.dirty || EmailID.touched)">
+                Invalid email id
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="mobileNo"
+                    placeholder="Mobile No." formControlName="mobileNo">
+                <label for="mobileNo">Mobile No.<sup class="text-danger">*</sup></label>
+            </div>
+            <div class="text-danger" *ngIf="MobileNo.errors?.['required'] && (MobileNo.dirty || MobileNo.touched)">
+                Field is required
+            </div>
+            <div class="text-danger" *ngIf="MobileNo.errors?.['pattern'] && (MobileNo.dirty || MobileNo.touched)">
+                Mobile no is invalid
+            </div>
+            
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="jobTitle"
+                    placeholder="Job Title" formControlName="jobTitle">
+                <label for="jobTitle">Job Title<sup class="text-danger">*</sup></label>
+            </div>
+            <div class="text-danger" *ngIf="JobTitle.errors?.['required'] && (JobTitle.dirty || JobTitle.touched)">
+                Field is required
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="weburl"
+                    placeholder="Web Url" formControlName="weburl">
+                <label for="weburl">Website url<sup class="text-danger">*</sup></label>
+            </div>
+            <div class="text-danger" *ngIf="WebUrl.errors?.['required'] && (WebUrl.dirty || WebUrl.touched)">
+                Field is required
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-floating">
+                <select class="form-select" id="productChoose"
+                    aria-label="Floating label select example" formControlName="productChoose">
+                    <option selected value="">-Select-</option>
+                    <option value="Azure">Azure Subscription</option>
+                    <optgroup label="-On Prem Product">
+                        <option value="Exchamge">Exchange</option>
+                    </optgroup>
+                    <optgroup label="-Cloud Products">
+                        <option value="Microsoft-365">Microsoft-365</option>
+                        <option value="Power BI">Power BI</option>
+                        <option value="Windows 10/11">Windows 10/11</option>
+                        <option value="Share Point">Share Point</option>
+                        <option value="Windows 365 Business">Windows 365 Business</option>
+                        <option value="Windows 365 Business (AHB)">Windows 365 Business (AHB)</option>
+                        <option value="Windows 365 Enterprise">Windows 365 Enterprise</option>
+                        <option value="Power Apps">Power Apps</option>
+                        <option value="One Drive">One Drive</option>
+                        <option value="Microsoft Teams">Microsoft Teams</option>
+                        <option value="MS Projects">MS Projects</option>
+                    </optgroup>
+                    <optgroup label="-Assessments">
+                        <option value="Infra Assessments">Infra Assessments</option>
+                        <option value="Modernization of Apps and DBA">Modernization of Apps and DBA</option>
+                        <option value="Managed Services">Managed Services (PaaS)</option>
+                        <option value="Biz Apps">Biz Apps</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                        <option value="Open AI">Azure OpenAI</option>
+                        <option value="Modern Workplace">Modern Workplace</option>
+                        <option value="Azure Virtual Desktop">Azure Virtual Desktop</option>
+
+                        <option value="Automated Landing Zone">Automated Landing Zone</option>
+                        <option value="Migration 5R Wave Planning">Migration 5R Wave Planning</option>
+                        <option value="Sustainability Assessment">Sustainability Assessment</option>
+                    </optgroup>
+                </select>
+                <label for="productChoose">Select a Product/Service<sup class="text-danger">*</sup></label>
+            </div>
+            <div class="text-danger" *ngIf="ProductChoose.errors?.['required'] && (ProductChoose.dirty || ProductChoose.touched)">
+                Field is required
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="areUreseller" value="0" formControlName="areUreseller">
+                <label class="form-check-label" for="areUreseller">Are you reseller</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="concern" formControlName="concern"></textarea>
+                <label for="concern">Concern</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row justify-content-center d-flex align-items-center g-2">
+                <div class="col-auto">
+                    <div class="inline captchaCode" selectable="False">{{randomString}}
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <a href="javascript:void()" (click)="refreshCaptcha()" class="btn btn-outline-dark"><i class="icofont-refresh"></i></a>
+                </div>
+                <div class="col-auto">
+                    <div class="">
+                        <input type="text" class="form-control" id="captcha" formControlName="captcha" placeholder="Enter Captcha">
+                        <div class="text-danger" *ngIf="Captcha.errors?.['required'] && (Captcha.dirty || Captcha.touched)">
+                            Captcha code is required
+                        </div>
+                        <div class="text-danger" *ngIf="wrongCaptcha">
+                            Entered wrong captcha, try again
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-center">
+            <button class="ucBtn btn btn-primary">Submit</button>
+        </div>
+        
+    </div>
+</form>
+<div *ngIf="HasEnquired">
+    <div class="row" *ngIf="WasSent">
+        <div class="col-12 text-center py-10">
+            <img src="/assets/img/icons/success.gif" width="100" alt="">
+            <h5>Thank you, we have recieved you query.</h5>
+            <p>Our team will review your information and get back to you as soon as possible.</p>
+        </div>
+    </div>
+    <div class="row" *ngIf="!WasSent">
+        <div class="col-12 text-center py-10">
+            <img src="/assets/img/icons/failed.gif" width="100" alt="">
+            <h5>We're sorry, there was an error</h5>
+            <p> Tt appears there was an error with the form you submitted on our website. Please try again. </p>
+        </div>
+    </div>
+</div>
+

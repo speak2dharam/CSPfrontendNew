@@ -1,0 +1,35 @@
+<section class="light-bg py-10">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="text-center mb-5">
+                    <h5>Frequently Asked Questions (FAQs)</h5>
+                    <h2 class="h1 fw-bold">Your Guide to Understanding Our Products and Services.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                
+                <div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item" *ngFor="let faqs of faq; let i = index">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                    [attr.data-bs-target]="'#collapse' + i" aria-expanded="false" aria-controls="collapseOne">
+                                    {{ faqs.Ques }} 
+                                </button>
+                            </h2>
+                            <div [id]="'collapse' + i" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{ faqs.Ans }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

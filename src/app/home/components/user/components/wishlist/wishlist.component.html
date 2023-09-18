@@ -1,0 +1,56 @@
+<section *ngIf="WishOutPut.length==0" class="py-5" style="background-color: #f2f2f2;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h4>Wish List</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="text-center py-5">
+                    <img src="/assets/img/wish-list.png" class="img-fluid" alt="">
+                    <h6 class="mt-4">Wish list is empty</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section *ngIf="WishOutPut.length>0" class="py-5" style="background-color: #f2f2f2;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="h4">Wishlist Items</h1>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div *ngFor="let wishItem of WishOutPut" class="bg-white px-3 py-2 shadow-sm mb-3">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <a a routerLink="../../ltsc/item/{{wishItem.itemSlug}}">
+                                    <img *ngIf="wishItem.skuImage === ''" src="/assets/img/icons/no-picture.jpg" width="35" alt="no product image">
+                                    <img *ngIf="wishItem.skuImage !== ''" src="/assets/img/products/excel-ltsc-2021-for-charity.jpg" [alt]="wishItem.skuTitle" width="35">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                            <h6 class="mb-0"><a routerLink="../../ltsc/item/{{wishItem.itemSlug}}" class="text-dark">{{wishItem.skuTitle}}</a> </h6>
+                            </div>
+                            <div class="col-2">
+                                <span>₹ {{wishItem.prodPrice}} excl tax</span>
+                            </div>
+                            <div class="col text-end">
+                                <button class="btn btn-sm btn-info me-2" (click)="addtocartfun(wishItem.itemID)">Move to cart</button>
+                                <button (click)="buyNowfun(wishItem.itemID)" class="btn btn-sm btn-primary me-2">Buy Now</button>
+                                <button (click)="removeWishItem(wishItem.itemID)" class="btn btn-sm btn-secondary" title="Remove from wish list"><i class="icofont-ui-delete"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

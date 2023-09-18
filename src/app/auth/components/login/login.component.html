@@ -1,0 +1,70 @@
+
+<section class="logSctn">
+    <div class="container">
+        <div class="row justify-content-center log2row d-flex align-items-center">
+            <div class="col-md-7">
+                <a routerLink="" class="d-inline-block mb-2 text-dark"><i class="icofont-arrow-left"></i> &nbsp;Back to home</a>
+                <div class="shadow rounded overflow-hidden border">
+                    <div class="row g-0">
+                        <div class="col-md-4 leftBox overflow-hidden border-end">
+                            <img src="assets/img/login-left.png" class="position-absolute start-0 hero-shape zindex--1" />
+                            <img src="assets/img/login-right.png" class="position-absolute end-0 hero-shape2 zindex--1 bottom-0" />
+                            <div class="p-4">
+                                <!--<img src="assets/img/logo-white.png" style="height:25px;" />-->
+                                <img src="/assets/img/unifycloudlogo.svg" style="height:35px;" />
+                            </div>
+                        </div>
+                        <div class="col-md-8 bg-white">
+                            <div class="p-4">
+                                <div class="mb-3">
+                                    <h3 class="fw-light mb-0">Sign in</h3>
+                                    <p>to access Unifycloud</p>
+                                </div>
+                                <form [formGroup]="loginform" (ngSubmit)="loginfn()">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" formControlName="emailID" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Email address</label>
+                                        <div class="text-danger" *ngIf="EmailID.errors?.['required'] && (EmailID.dirty || EmailID.touched)">
+                                            <small>Enter email id</small>
+                                        </div>
+                                        <div class="text-danger" *ngIf="EmailID.errors?.['email'] && (EmailID.dirty || EmailID.touched)">
+                                            <small>Enter valid email id</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control"formControlName="pwd" id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">Password</label>
+                                        <div class="text-danger" *ngIf="Pwd.errors?.['required'] && (Pwd.dirty || Pwd.touched)">
+                                            <small>Enter Password</small>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="ucBtn btn btn-primary w-100">Login</button>
+                                        <a href="#" class="fw-bold d-inline-block mt-2">Forgot Password?</a>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center mt-4 loginfoot">
+                    <p class="mb-1">Don't have a Unify account? <a routerLink="/auth/sign-up">Sign Up Now</a></p>
+                    <p class="mb-0" style="color: #868686;"><small>© 2023, The Unified Cloud Pvt. Ltd. All Rights Reserved. ({{appVersion}})</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div  class="fpLoader" *ngIf="showloader">
+    <div>
+        <div class="d-flex justify-content-center p-2">
+            <div class="spinner-border text-white" style="width: 5rem; height: 5rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <span class="text-white fw-normal">Please wait...</span>
+    </div>
+</div>

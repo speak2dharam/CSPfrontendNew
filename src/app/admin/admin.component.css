@@ -1,0 +1,19 @@
+body{
+    font-size: .5rem !important;
+}
+
+.mainContner{
+    position: relative;
+    margin-top: 0rem;
+    /* background-color: red; */
+    height: calc(100vh - 3rem);
+    margin-left: 15.875rem;
+    transition: 0.5s;
+}
+main{
+    background-color: #f5f7fa;
+    /* background-color: red; */
+}
+.mainAreaShrink{
+    margin-left: 4rem;
+}

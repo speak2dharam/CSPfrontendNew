@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card p-3">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>S No.</th>
+                            <th>Product ID</th>
+                            <th>Product Title</th>
+                            <th>Product Category</th>
+                            <th>Product Publisher</th>
+                            <th>Added On</th>
+                            <!-- <th>Status</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let prod of ProdOutput">
+                            <td>{{prod.pid}}</td>
+                            <td>{{prod.productID}}</td>
+                            <td>{{prod.productTitle}}</td>
+                            <td>{{prod.productCategory}}</td>
+                            <td>{{prod.prodPublisher}}</td>
+                            <td>{{prod.addedOn}}</td>
+                            <!-- <td>{{prod.isActive}}</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

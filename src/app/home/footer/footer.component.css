@@ -1,0 +1,31 @@
+.vdoPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000b0;
+    overflow-y: auto;
+    z-index: 99;
+    transition: 0.8s;
+}
+.vdoPopup>div{
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+}
+.vdoPopup>div a{
+    position: absolute;
+    top: -50px;
+    right: -2px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+@media(max-width:768px){
+    .vdoPopup>div{
+        width: 95%;
+    }
+}

@@ -1,0 +1,188 @@
+body {
+    /*font-family: 'Comfortaa', cursive;*/
+}
+a{
+    text-decoration:none;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    transition:0.5s;
+    /* box-shadow: none; */
+    background-color: #fff;
+}
+
+.stickyheader {
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 8%) 0px 2px 12px;
+}
+    .stickyheader .navbar-brand img {
+        height: 35px;
+    }
+    /*.navbar-brand {
+        background-color: #fff;
+    }*/
+        .navbar-brand img {
+            height: 35px;
+            transition: 0.5s;
+        }
+.mainBanner{
+    /*background-image:url(../img/background-img-gray2.jpg);
+    background-position:center bottom;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:110vh;*/
+    position:relative;
+}
+.loginBox {
+    position: fixed;
+    right: 8%;
+    top: 15%;
+    width: 30%;
+    padding: 20px;
+}
+    .loginBox>div{
+
+    }
+#loginFormsctn {
+    transition: 0.1s;
+}
+#loginshort {
+    transition: 0.2s;
+    cursor:pointer;
+}
+#BEcarouselCaptions .carousel-item {
+    background-image: url(/assets/landingPage/assessment/img/background-img-gray2.jpg);
+    /* background-image: url(../img/background-img-gray2.jpg); */
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    transition: -webkit-transform 2s ease;
+    transition: transform 2s ease;
+    transition: transform 2s ease, -webkit-transform 2s ease;
+    position: relative;
+    /*z-index: 9;*/
+}
+.carousel-caption {
+    padding-top: 15%;
+}
+.carousel-indicators a {
+    display: inline-flex;
+    background-color: #c2062ce0;
+    padding: 8px 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+    .carousel-indicators a.active {
+        background-color: #1b1b1bd9;
+    }
+    .carousel-indicators a img {
+        /*filter: brightness(0) invert(1);*/
+        height: 30px;
+    }
+    .carousel-indicators a span {
+        display: block;
+        color: #fff;
+        font-size: 12px;
+    }
+#BEcarouselCaptions .carousel-caption h5 {
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+}
+#BEcarouselCaptions .carousel-caption h3 {
+    animation-duration: 1s;
+    animation-delay: 1.0s;
+    /*font-size: 50px;
+    font-weight: 700;*/
+}
+
+#BEcarouselCaptions .carousel-caption h6 {
+    animation-duration: 1s;
+    animation-delay: 1.3s;
+}
+.loginBox {
+    /*background-color: #dedede;*/
+    background-color: #fff;
+}
+.chhoseUsrType label {
+    font-size: 12px;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+    .chhoseUsrType label:hover, .chhoseUsrType label:active {
+        background-color: #efefef;
+    }
+.chhoseUsrType .form-check {
+    position: relative;
+    border: 1px solid gainsboro;
+    padding: 0;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.chhoseUsrType .form-check-input {
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    /* border-radius: 0; */
+    
+}
+.form-check-input:checked {
+    background-color: #c3062e;
+    border-color: #c50f35;
+}
+.py-10 {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+}
+.light-bg {
+    background-color: #f6f6f6;
+}
+.captchaCode {
+    font-weight: 400;
+    padding-bottom: 0;
+    height: 40px;
+    -webkit-user-select: none;
+    user-select: none;
+    text-decoration: line-through;
+    font-style: italic;
+    font-size: x-large;
+}
+footer {
+    /*background-color: #393a3c;*/
+    background-color: #272727;
+}
+    footer p {
+        color: #8b8b8b;
+    }
+.paylogo > div {
+    padding: 2px 3px;
+    background-color: #ffffff29;
+    margin: 2px;
+}
+    .paylogo img {
+        height: 22px;
+    }
+.addresdiv img{
+    height:50px;
+}
+.socialmedia a {
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    background-color: #666666;
+    line-height: 30px;
+    text-align: center;
+    margin: 3px;
+}

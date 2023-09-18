@@ -1,0 +1,14 @@
+.enqfrm .text-danger{
+    font-size: 10px;
+}
+
+.captchaCode{
+    font-weight: 400;
+    padding-bottom: 0px;
+    height: 40px;
+    -webkit-user-select: none;
+    user-select: none;
+    text-decoration: line-through;
+    font-style: italic;
+    font-size: x-large;
+}

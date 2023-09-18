@@ -1,0 +1,45 @@
+<div class="pt-5 text-center" *ngIf="isChecked">
+    <div>
+        <img src="/assets/img/icons/selection.png" style="height: 70px;" alt="">
+    </div>
+    <div class="mt-4">
+        <h4>No enquiry selected</h4>
+        <h6>Total {{inputValue}} enquiries recieved</h6>
+        
+    </div>
+</div>
+<div *ngIf="!isChecked" class="pt-2">
+    <div class="text-end border-bottom mb-3 pb-3">
+        <div class="row gx-2 justify-content-end">
+            <div class="col-auto">
+                <button class="btn btn-dark btn-sm" title="Reply"><i class="icofont-reply"></i></button>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-dark btn-sm" title="Delete"><i class="icofont-ui-delete"></i></button>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-dark btn-sm" title="Mark as not read">Mark as not read &nbsp;<i class="icofont-marker"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col-6 text-end"><strong>Name</strong></div>
+        <div class="col-6">{{enqries.fullName}}</div>
+        <div class="col-6 text-end"><strong>Email ID	</strong></div>
+        <div class="col-6">{{enqries.emailID}}</div>
+        <div class="col-6 text-end"><strong>Mobile No.</strong></div>
+        <div class="col-6">{{enqries.emailID}}</div>
+        <div class="col-6 text-end"><strong>Job Title</strong></div>
+        <div class="col-6">{{enqries.jobTitle}}</div>
+        <div class="col-6 text-end"><strong>Interested In	</strong></div>
+        <div class="col-6">{{enqries.interestedIn}}</div>
+        
+        <div class="col-6 text-end"><strong>Website</strong></div>
+        <div class="col-6"><a href="{{enqries.website}}" target="_blank">{{enqries.website}}</a></div>
+        <div class="col-6 text-end"><strong>Company Name</strong></div>
+        <div class="col-6">{{enqries.companyName}}</div>
+        
+        <div class="col-6 text-end"><strong>Recieved On</strong></div>
+        <div class="col-6"><span class="badge bg-info">{{enqries.addedOn}}</span></div>
+    </div>
+</div>

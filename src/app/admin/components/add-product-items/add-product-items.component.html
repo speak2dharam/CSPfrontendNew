@@ -1,0 +1,133 @@
+<section class="px-3 py-2 border-bottom bg-white">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 pb-0">
+                  <li class="breadcrumb-item"><a routerLink="/admin/dashboard" class="text-dark">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Add Product Item</li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+</section>
+<section class="px-3 py-2">
+    <div class="row justify-content-between align-items-center">
+        <div class="col">
+            <h3 class="fw-bold h5">Add Product Item  <span class="fw-light">| Product Item</span></h3>
+        </div>
+        <div class="col text-end">
+            <!-- <button class="btn btn-sm btn-outline-dark">Refresh&nbsp;<i class="icofont-refresh"></i></button> -->
+            <a href="" class="btn btn-sm btn-outline-dark">See product items</a>
+        </div>
+    </div>
+</section>
+<section class="px-3 py-2">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="bg-white p-3 shadow-sm">
+                <div class="border-bottom pb-2 mb-3">
+                    <h6>Fill and submit form to add product item.</h6>
+                </div>
+                <div class="">
+                    <div>
+                        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="PID" formControlName="PID" aria-label="Floating label select example">
+                                            <option value="">- Choose product -</option>
+                                            <option *ngFor="let product of products" value="{{product.pid}}">{{product.productTitle}} - <span>{{product.productID}}</span> </option>
+                                        </select>
+                                        <label for="PID">Product Master&nbsp;<span class="text-danger">*</span></label>
+                                    </div>
+                                    <div *ngIf="myForm.controls['PID'].invalid && myForm.controls['PID'].touched" class="error">
+                                        Choose product for adding items.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="Skulitle" formControlName="Skulitle" placeholder="name@example.com">
+                                        <label for="Skulitle">Enter product item title&nbsp;<span class="text-danger">*</span></label>
+                                    </div>
+                                    <div *ngIf="myForm.controls['Skulitle'].invalid && myForm.controls['Skulitle'].touched" class="error">
+                                        Enter product title, min lenth 5 and max length 100.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a comment here" id="SkuDescription" formControlName="SkuDescription" style="height: 130px"></textarea>
+                                        <label for="SkuDescription">Enter product item description&nbsp;<span class="text-danger">*</span></label>
+                                    </div>
+                                    <div *ngIf="myForm.controls['SkuDescription'].invalid && myForm.controls['SkuDescription'].touched" class="error">
+                                        Enter product title, min lenth 5 and max length 1500.
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="UnitOfMeasure" formControlName="UnitOfMeasure" placeholder="name@example.com">
+                                        <label for="UnitOfMeasure">Enter Unit Of Measure</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="TermDuration" formControlName="TermDuration" placeholder="name@example.com">
+                                        <label for="TermDuration">Enter Term Duration</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="BillingPlan" formControlName="BillingPlan" aria-label="Floating label select example">
+                                            <option value="">- Choose billing plan -</option>
+                                            <option *ngFor="let billplan of billPlans" value="{{billplan.billPlanID}}">{{billplan.billPlanName}}</option>
+                                        </select>
+                                        <label for="BillingPlan">Billing Plan&nbsp;<span class="text-danger">*</span></label>
+                                    </div>
+                                    <div *ngIf="myForm.controls['BillingPlan'].invalid && myForm.controls['BillingPlan'].touched" class="error">
+                                        Choose billing plan.
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="ProdPrice" formControlName="ProdPrice" placeholder="name@example.com">
+                                        <label for="ProdPrice">Enter item price&nbsp;<span class="text-danger">*</span></label>
+                                    </div>
+                                    <div *ngIf="myForm.controls['ProdPrice'].invalid && myForm.controls['ProdPrice'].touched" class="error">
+                                        Enter item price carefully.
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="ProdSegment" formControlName="ProdSegment" aria-label="Floating label select example">
+                                            <option value="">- Select Segment  -</option>
+                                            <option *ngFor="let segment of segments" value="{{segment.segmentID}}">{{segment.segmentName}}</option>
+                                        </select>
+                                        <label for="ProdSegment">Product Segment&nbsp;<span class="text-danger">*</span></label>
+                                    </div>
+                                    <div *ngIf="myForm.controls['ProdSegment'].invalid && myForm.controls['ProdSegment'].touched" class="error">
+                                        Select segment.
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="ProdTags" formControlName="ProdTags" placeholder="name@example.com">
+                                        <label for="ProdTags">Tags</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button *ngIf="!isLoading" type="submit" [disabled]="!myForm.valid" class="btn btn-info shadow-sm">
+                                        Add Product Item
+                                    </button>
+                                    <button *ngIf="isLoading" class="btn btn-info" type="button" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Processing...
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

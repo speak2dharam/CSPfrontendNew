@@ -1,0 +1,506 @@
+<section class="offc365sctin">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h6>Stay connected and productive from anywhere with Exchange.</h6>
+                <h1 class="fw-bold">Streamline your organization's communication and collaboration with Exchange.</h1>
+                <p>Upgrade your organization's email and calendaring capabilities with Exchange today and take advantage of its advanced features and tools. Contact us now to get started.</p>
+                <div class="d-flex align-items-center flex-wrap">
+                    <!-- <a href="/product-services/exchange#Getstarted" class="animated fadeInUp ucBtn btn btn-primary">Get
+                        Started</a> -->
+                        <button data-bs-toggle="modal" data-bs-target="#buySrcModal" class="animated fadeInUp ucBtn btn btn-primary">Get
+                            Started</button>
+                    <a routerLink="../../contact" class="animated fadeInUp btn btn-outline-light ms-2 btnu">Contact Sales</a>
+                </div>
+                <a href="/product-services/exchange#plan" class="text-dark d-inline-block mt-3"><strong><u>Compare
+                            pricing plan</u></strong></a>
+            </div>
+        </div>
+    </div>
+    <!-- <img src="/assets/img/officeIntro.jpg" class="offIntro" alt=""> -->
+    <!-- wave animation start -->
+    <div class="wavOffice">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#f6f4fe" />
+            </g>
+        </svg>
+    </div>
+    <!-- wave animation end -->
+</section>
+<section class="py-5" style="background-color: #F6F4FE;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2 class="fw-bold h3">Microsoft Partner India – Trusted Gold Partner</h2>
+                <p>Unified Cloud Pvt Ltd is a Born-in-the-Cloud company that assists organizations in achieving digital 
+                    transformation by leveraging the Cloud. We are a strong team of 200+ employees, helping 1000+ 
+                    customers in their cloud journey over the past 12+ years and having one of India's most prominent 
+                    teams of certified and experienced Azure engineers. We are Microsoft Gold Partner and Microsoft 
+                    Certified Migration, Managed Services, and DevOps, providing solutions around Cloud Consulting, 
+                    Migration, DevOps, Open AI, and Analytics with a presence in Noida and Gurgaon. Unified Cloud Pvt Ltd 
+                    (Unify Cloud) also won Microsoft Partner of the Year -2019, 2020, and 2022 Awards.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-10">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-5 text-md-end">
+                <div>
+                    <h4 class="display-6">Protect your organization's sensitive data with Exchange's advanced email features.</h4>
+                    <p>At our store, you can purchase licenses for Exchange at competitive prices. Our team of experts can help you choose the right licensing option for your needs, and assist you with the installation and configuration process.</p>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="ofcPkg ps-md-5">
+                    <ul class="ofcPkgList">
+                        <li>
+                            <h5>Advanced Email Features</h5>
+                            <p>Exchange offers advanced email features such as automatic email archiving, message encryption, and message tracking, which can help your organization comply with regulatory requirements and protect sensitive data.
+                            </p>
+                        </li>
+                        <li>
+                            <h5>Shared Calendars and Contacts</h5>
+                            <p>Exchange allows you to share calendars and contacts with your colleagues, which can help streamline scheduling and collaboration.</p>
+                        </li>
+                        <li>
+                            <h5>Mobile Device Access</h5>
+                            <p>Exchange supports mobile device access, which means you can access your email and calendar from anywhere, on any device.</p>
+                        </li>
+                        <li>
+                            <h5>Anti-spam and Anti-malware Protection</h5>
+                            <p>Exchange has built-in anti-spam and anti-malware protection, preventing malicious emails from reaching your organization's inboxes.</p>
+                        </li>
+                        <li>
+                            <h5>Integration with Microsoft Office</h5>
+                            <p>Exchange integrates seamlessly with Microsoft Office, which means you can access your email and calendar directly from Outlook, Word, Excel, and other Office applications.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-10" style="background-color: #f2f2f2;" id="plan">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="hm7-title mb-5">
+                    <h3 class="fw-bold">Explore Exchange plans</h3>
+                    <h6>Upgrade your organization's productivity and security with our reliable and cost-effective solutions</h6>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" [(ngModel)]="isChecked" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                        <label class="form-check-label fw-bold" for="flexSwitchCheckChecked">Yearly Plan</label>
+                    </div>
+                    <small>Current prices effective for the month of April 2023</small>
+                </div>
+            </div>
+        </div>
+        <div class="row g-3 justify-content-center">
+            <div class="col-md-4">
+                <div class="bg-white rounded shadow-sm p-3 pricing-column position-relative h-100">
+                    <div class="">
+                        <div class="mb-4">
+                            <h4>Exchange Online (Plan 1)</h4>
+                            <span class="pricing-label d-block mt-4">From only</span>
+                            <h4 *ngIf="isChecked" class="h2 mt-2 yearly-price">
+                                3,780
+                                <span>/yr</span>
+                            </h4>
+                            <h4 *ngIf="!isChecked" class="h2 mt-2 monthly-price">
+                                346.5
+                                <span>/mo</span>
+                            </h4>
+                            <small>GST extra as applicable</small>
+                        </div>
+                        <ul class="prdftrList">
+                            <li>Messaging, calendaring, and email archiving plan accessible from Outlook on PCs, the Web and mobile devices.</li>
+                        </ul>
+                        
+                        <div *ngIf="!isChecked" class="text-center mb-2">
+                            <small><strong><i>This plan will be billed annually and user can opt for emi option from their card provider</i></strong></small>
+                            <strong></strong>
+                        </div>
+                        <div class="buynowbox">
+                            <button class="ucBtn btn btn-primary buynow1" data-bs-toggle="modal" data-bs-target="#buySrcModal">Buy Now</button>
+                            <button class="btn btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#plan1" aria-controls="staticBackdrop">
+                                View details
+                              </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-white rounded shadow-sm p-3 pricing-column position-relative overflow-hidden">
+                    <div class="">
+                        <span class="popular-badge position-absolute text-center fw-bold">Most Popular</span>
+                        <div class="mb-4">
+                            <h4>Exchange Online (Plan 2)</h4>
+                            <span class="pricing-label d-block mt-4">From only</span>
+                            <h4 *ngIf="isChecked" class="h2 mt-2 yearly-price">
+                                7,560
+                                <span>/yr</span>
+                            </h4>
+                            <h4 *ngIf="!isChecked" class="h2 mt-2 monthly-price">
+                                693
+                                <span>/mo</span>
+                            </h4>
+                            <small>GST extra as applicable</small>
+                        </div>
+                        <ul class="prdftrList">
+                            <li>Best messaging and calendaring plan accessible from PCs, the Web and mobile devices with advanced archiving, compliance and integrated voicemail capabilities.
+                            </li>
+                        </ul>
+                        
+                        <div *ngIf="!isChecked" class="text-center mb-2">
+                            <small><strong><i>This plan will be billed annually and user can opt for emi option from their card provider</i></strong></small>
+                            <strong></strong>
+                        </div>
+                        <div class="buynowbox">
+                            <button class="ucBtn btn btn-primary buynow1" data-bs-toggle="modal" data-bs-target="#buySrcModal">Buy Now</button>
+                            <button class="btn btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#plan2" aria-controls="plan2">
+                                View details
+                              </button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="text-center py-5">
+    <h4 class="h5 mb-0">For Discounts and bulk enquiry, please email your query to <a href="mailto:cspleads@unifycloud.in">cspleads@unifycloud.in</a></h4>
+</div>
+
+<section class="py-5" style="background-color: gainsboro;">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-7">
+                <h3>Not sure which plan is right for you?</h3>
+                <h6>Take a short assessment to find your perfect match.</h6>
+            </div>
+            <div class="col-md-5 text-md-end">
+                <div>
+                    <a href="tel:9625603581" class="d-inline-block h2 mb-0 fw-bolder text-dark">96256 03581</a>
+                    <div class="clearfix"></div>
+                    <a href="/contact" class="text-dark fw-bold">Help me choose</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="plan1"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="staticBackdropLabel">Microsoft Exchange Online Plan 1 </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body position-relative">
+        <div>
+            <ul class="offCanvaslist">
+                <li>Work smarter, anywhere, with hosted email for business. </li>
+                <li>50 GB mailbox and messages up to 150 MB</li>
+                <li>Outlook on the web provides a premium browser-based experience. </li>
+                <li>Focused Inbox makes it easy to track email that matters most. </li>
+                <li>Automatically move old messages to an In-Place Archive </li>
+            </ul>
+            <div class="plansOffcanvas">
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/security-system.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Advanced security capabilities </h6>
+                            <p class="mb-0">Exchange Online helps protect your information with advanced capabilities. Anti-malware and anti-spam filtering protects mailboxes. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/protection.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Reliability</h6>
+                            <p class="mb-0">With a guaranteed 99.9% uptime, financially backed service level agreement, you can count on your email always being up and running. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/web.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Admin Center  </h6>
+                            <p class="mb-0">Manage your organization efficiently with the Exchange admin center, an easy-to-use, web-based interface.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/mobile-protection.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Security across devices </h6>
+                            <p class="mb-0">With mobile device policies, you can create approved mobile device lists, enforce PIN lock, and remove confidential company data from lost phones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/technical-support.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Easy to maintain. </h6>
+                            <p class="mb-0">It’s easier than ever to provide your users with the business email they need to stay productive. Automatic patching eliminates the time and effort of maintaining your system. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/data-management.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Access from anywhere </h6>
+                            <p class="mb-0">Provide your users with access to email, calendar, and contacts on all major browsers and across devices. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/next.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Microsoft FastTrack for Microsoft 365 </h6>
+                            <p class="mb-0">Microsoft FastTrack for Microsoft 365 is our customer success service designed to help you move to Microsoft 365 smoothly and with confidence, and realize business value faster. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/data-cleaning.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>In-place archive </h6>
+                            <p class="mb-0">Give your users an in-place archive, so they can keep all their important data in one place. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/outlook.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Outlook integration </h6>
+                            <p class="mb-0">Integration with Outlook means they’ll enjoy a rich, familiar email experience with offline access. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/private-network.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Data safeguards </h6>
+                            <p class="mb-0">Data loss prevention capabilities prevent users from mistakenly sending sensitive information to unauthorized people. Globally redundant servers, premier disaster recovery capabilities, and a team of security experts monitoring Exchange Online around the clock safeguard your data. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/access-control.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Stay in control. </h6>
+                            <p class="mb-0">Maintain control over your environment while gaining the advantage of hosting your email on Microsoft servers. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" data-bs-toggle="modal" data-bs-target="#buySrcModal" class="offcanvasBtn">Buy Now</a>
+    </div>
+</div>
+<div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="plan2"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="staticBackdropLabel">Microsoft Exchange Online Plan 2 </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body position-relative">
+        <div>
+            <ul class="offCanvaslist">
+                <li>Everything in Exchange Online (Plan 1), plus</li>
+                <li>100 GB mailbox and messages up to 150 MB </li>
+                <li>Built-in data loss prevention (DLP) </li>
+                <li>Cloud Voicemail services with call answering, dial-in UI, and automated attendant.  </li>
+            </ul>
+            <div class="plansOffcanvas">
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/security-system.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Advanced security capabilities </h6>
+                            <p class="mb-0">Exchange Online helps protect your information with advanced capabilities. Anti-malware and anti-spam filtering protects mailboxes. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/protection.png" alt="">
+                        </div>
+                        <div class="col">
+                            <p class="mb-0">Reliability With a guaranteed 99.9% uptime, financially backed service level agreement, you can count on your email always being up and running. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/web.png" alt="">
+                        </div>
+                        <div class="col">
+                            <p class="mb-0">Admin Center Manage your organization efficiently with the Exchange admin center, an easy-to-use, web-based interface. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/mobile-protection.png" alt="">
+                        </div>
+                        <div class="col">
+                            <p class="mb-0">Security across devices with mobile device policies, you can create approved mobile device lists, enforce PIN lock, and remove confidential company data from lost phones.  </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/technical-support.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Easy to maintain. </h6>
+                            <p class="mb-0">Easy to maintain. It’s easier than ever to provide your users with the business email they need to stay productive. Automatic patching eliminates the time and effort of maintaining your system. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/data-management.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Access from anywhere </h6>
+                            <p class="mb-0">Access from anywhere Provide your users with access to email, calendar, and contacts on all major browsers and across devices. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/next.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Microsoft FastTrack for Microsoft 365 </h6>
+                            <p class="mb-0">Microsoft FastTrack for Microsoft 365 is our customer success service designed to help you move to Microsoft 365 smoothly and with confidence and realize business value faster. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/data-cleaning.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>In-place archive </h6>
+                            <p class="mb-0">In-place archive Give your users an in-place archive, so they can keep all their important data in one place. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/outlook.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Outlook integration </h6>
+                            <p class="mb-0">Outlook integration with Outlook means they’ll enjoy a rich, familiar email experience with offline access. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/private-network.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Data safeguards </h6>
+                            <p class="mb-0">Data safeguards Data loss prevention capabilities prevent users from mistakenly sending sensitive information to unauthorized people. Globally redundant servers, premier disaster recovery capabilities, and a team of security experts monitoring Exchange Online around the clock safeguard your data. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light shadow border p-2 mb-3">
+                    <div class="row align-items-center gx-2">
+                        <div class="col-auto">
+                            <img src="/assets/img/icons/access-control.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h6>Stay in control. </h6>
+                            <p class="mb-0">Maintain control over your environment while gaining the advantage of hosting your email on Microsoft servers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" data-bs-toggle="modal" data-bs-target="#buySrcModal" class="offcanvasBtn">Buy Now</a>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="buySrcModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ready to get started</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <!-- <h6>
+                        <p>Fill out the form to be connected to one of our experts.</p>
+                    </h6> -->
+                    <app-enquiryform></app-enquiryform>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

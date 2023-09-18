@@ -1,0 +1,41 @@
+<section class="px-3 py-2 border-bottom bg-white">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 pb-0">
+                  <li class="breadcrumb-item"><a routerLink="/admin/dashboard" class="text-dark">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Manage Products</li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+</section>
+<section class="px-3 py-2">
+    <div class="row justify-content-between align-items-center">
+        <div class="col">
+            <h3 class="fw-bold h5">LTSC Products  <span class="fw-light">| Manage Products</span></h3>
+        </div>
+        <div class="col text-end">
+            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#AddProdcutModal">Add Product&nbsp;<i class="icofont-plus-square"></i></button>
+            <!-- <a href="" class="btn btn-sm btn-secondary">Refresh&nbsp;<i class="icofont-refresh"></i></a> -->
+        </div>
+    </div>
+</section>
+<section class="px-3 py-2">
+    <app-products></app-products>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="AddProdcutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-products-add></app-products-add>
+        </div>
+      </div>
+    </div>
+  </div>

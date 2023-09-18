@@ -1,0 +1,161 @@
+<!-- {{ItemSlug}} -->
+<section class="py-3 bg-secondary bg-opacity-25 bg-gredient d-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <h1 class="fs-5 text-dark mb-0">Email & Communication</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5" style="background-color: #f2f2f2;">
+    <div class="container">
+        <div *ngFor="let prodItem of ProdItemOutput" class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="border shadow-sm p-3 rounded-2 position-relative bg-white text-center">
+                    <img *ngIf="prodItem.skuImage === ''" src="/assets/img/icons/no-picture.jpg" class="img-fluid" alt="">
+                    <img *ngIf="prodItem.skuImage !== ''" [src]="prodItem.skuImage" class="img-fluid" alt="{{prodItem.skuTitle}} for {{prodItem.segmentName}}">
+                    <span *ngIf="prodItem.discountType!==''" class="dscOff">
+                        <i *ngIf="prodItem.discountType==='Fixed'" class="icofont-rupee"></i>{{prodItem.discountValue}} 
+                        <i *ngIf="prodItem.discountType==='Percentage'">%</i> OFF
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div>
+                    <p class="mb-0 text-secodary">{{prodItem.productID}} &nbsp;|&nbsp;SKU: {{prodItem.skuID}}
+                    </p>
+                    <span class="badge bg-secondary bg-opacity-25 text-dark">Publisher : {{prodItem.publisherName}}</span>
+                    <h1 class="fw-bold fs-2 mt-2">{{prodItem.skuTitle}} for {{prodItem.segmentName}}</h1>
+                    <div class="mb-1">
+                        <span class="fs-6 d-inline-block me-3 fw-bold">
+                            ₹ {{CalculateDicountAmt(prodItem.prodPrice,prodItem.discountValue,prodItem.discountType)}} excl tax
+                        </span>
+                        <span *ngIf="prodItem.discountType!==''"><del>₹ {{formatPrice(prodItem.prodPrice)}} excl tax</del></span>
+                    </div>
+
+                    <span class="badge bg-success">Billing plan type &nbsp;{{prodItem.billingPlan}}</span>
+
+                    <div class="mt-3">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-auto">
+                                <label class="fw-bold">QTY</label>
+                               </div>
+                                <div class="col-auto">
+                                    <div class="">
+                                        <select [(ngModel)]="selectedValues[prodItem.itemID]" ngInit="selectedValues = 1"
+                                            class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            <div class="col-auto">
+                                <button (click)="addtocartfun(prodItem.itemID,selectedValues[prodItem.itemID])" class="btn btn-danger btn-sm">Add to cart&nbsp;<i class="icofont-cart-alt"></i></button>
+                            </div>
+                            <div class="col-auto">
+                                <button (click)="buyNowfun(prodItem.itemID,selectedValues[prodItem.itemID])" class="btn btn-outline-danger btn-sm">Buy Now</button>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-outline-secondary btn-sm" (click)="addWishItem(prodItem.itemID)"><i class="icofont-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top border-bottom py-2 my-4">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <img src="/assets/img/icons/technical-service.png" style="height: 50px;" alt="">
+                            </div>
+                            <div class="col">
+                                <h6 class="mb-0">Have a Question? Ask a Specialist</h6>
+                                <a href="tel:9625603581" class="fs-4 fw-light text-dark">+91 96256 03581</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4 itmFtrBox">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div>
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-auto">
+                                            <i class="icofont-dollar"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="mb-0">Low Prices</h6>
+                                            <span>Price match guarantee</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-auto">
+                                            <i class="icofont-check-circled"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="mb-0">Guaranteed Fitment.</h6>
+                                            <span>Always the correct part</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-auto">
+                                            <i class="icofont-support-faq"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="mb-0">In-House Experts.</h6>
+                                            <span>We know our products</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-auto">
+                                            <i class="icofont-reply"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="mb-0">Easy Returns.</h6>
+                                            <span>Quick & Hassle Free</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>{{prodItem.skuDescription}}</p>
+                        <div class="d-none">
+                            <span class="badge bg-secondary text-dark bg-opacity-25 me-2 mb-2">Microsoft</span>
+                            <span class="badge bg-secondary text-dark bg-opacity-25 me-2 mb-2">Microsoft</span>
+                            <span class="badge bg-secondary text-dark bg-opacity-25 me-2 mb-2">Microsoft</span>
+                            <span class="badge bg-secondary text-dark bg-opacity-25 me-2 mb-2">Microsoft</span>
+                            <span class="badge bg-secondary text-dark bg-opacity-25 me-2 mb-2">Microsoft</span>
+                            <span class="badge bg-secondary text-dark bg-opacity-25 me-2 mb-2">Microsoft</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+
+</section>

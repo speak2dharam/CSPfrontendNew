@@ -1,0 +1,54 @@
+.achlist{
+    margin: 50px 0 0 30px;
+    padding: 25px 0;
+    border-left: 2px dashed #bababa;
+    position: relative;
+}
+.achlist::before{
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    background-image: url(/assets/img/icons/rocket-launch.png);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center center;
+}
+.achlist li{
+    list-style: none;
+    position: relative;
+    margin-bottom: 40px;
+}
+.achlist li:last-child{
+    margin-bottom: 0;
+}
+.achlistImg{
+    position: absolute;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
+    top: 0;
+    padding: 10px;
+    border-radius: 5px;
+    background: #005C97;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.achlistImg>div{
+
+}
+.achlistImg>div img{
+    width: 100%;
+}
+.achlistCntnt{
+    padding-left: 35px;
+    padding-top: 10px;
+}
+
+.ShowMore{
+    max-height: initial !important;
+    transition: 0.3s;
+}

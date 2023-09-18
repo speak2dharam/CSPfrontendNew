@@ -1,0 +1,52 @@
+<section class="light-bg">
+    <div class="container">
+        <div class="row vh-100 align-items-center justify-content-center">
+            <div class="col-md-4">
+                <div *ngIf="!HasVerified" class="text-center">
+                    <div class="mb-4">
+                        <h4 class="fw-bold">Verify your account</h4>
+                        <h6>We have sent verification key on your registered email id</h6>
+                    </div>
+                    <form  [formGroup]="verifyForm" (ngSubmit)="verifyfn()">
+                        <div class="form-floating mt-3">
+                            <input type="password" class="form-control" id="actkey" formControlName="actkey" [ngClass]="{'is-invalid':submitted && verifyForm.controls['actkey'].errors}" placeholder="Key">
+                            <label for="actkey">Verification Key</label>
+                        </div>
+                        <div *ngIf="submitted && verifyForm.controls['actkey'].errors" class="text-danger">
+                            <div *ngIf="submitted && verifyForm.controls['actkey'].errors['required']">
+                                <small>Requires</small>
+                            </div>
+                            <div *ngIf="submitted && verifyForm.controls['actkey'].errors['minlength']">
+                                <small>Not less than 6 character</small> 
+                            </div>
+                            <div *ngIf="submitted && verifyForm.controls['actkey'].errors['maxlength']">
+                                <small>Not more than 6 character</small> 
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="ucBtn btn btn-primary w-100">Verify</button>
+                        </div>
+                    </form>
+                    <a href="javascript:void()" (click)="resendKey()" class="btn btn-link">Resend code?</a>
+                </div>
+                <div *ngIf="HasVerified" class="text-center">
+                    <!-- <img src="/assets/img/icons/quality.png" alt=""> -->
+                    <img src="/assets/img/icons/success.gif" width="100" alt="">
+                    <h4 class="my-4">Your account has been verified successfully</h4>
+                    <a routerLink="/auth/login" class="ucBtn btn btn-primary w-100"> Go to login page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div  class="fpLoader" *ngIf="showloader">
+    <div>
+        <div class="d-flex justify-content-center p-2">
+            <div class="spinner-border text-white" style="width: 5rem; height: 5rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <span class="text-white fw-normal">Please wait...</span>
+    </div>
+</div>

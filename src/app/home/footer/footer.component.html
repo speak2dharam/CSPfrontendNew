@@ -1,0 +1,126 @@
+<footer class="">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-md-4 text-center text-md-start text-lg-start">
+                <div>
+                    <img src="assets/img/logo-white.png" class="footLogo" />
+
+                    <div class="my-3">
+                        <span style="color: #bebebe;">Call Us</span>
+                        <h6 class="mb-0" style="color: #bebebe;">96256 03581</h6>
+                        <small style="color: #bebebe;">10am - 4pm IST</small>
+                    </div>
+                    <div class="my-3">
+                        <span style="color: #bebebe;">Mail Us</span>
+                        <h6 class="mb-0" style="color: #bebebe;">cspleads@unifycloud.in</h6>
+                    </div>
+                    <div>
+                        <h5 class="ft-subtitle position-relative mb-3 d-inline-block">Follow us on</h5>
+                        <ul class="footSocial">
+                            <li><a title="Facebook" href="https://www.facebook.com/unifycloudin" target="_blank"><i class="icofont-facebook"></i></a></li>
+                            <li><a title="Twitter" href="https://twitter.com/unifycloudin" target="_blank"><i class="icofont-twitter"></i></a></li>
+                            <li><a title="Instagram" href="https://www.instagram.com/unifycloudin/" target="_blank"><i class="icofont-instagram"></i></a></li>
+                            <li><a title="Pinterest" href="https://www.pinterest.com/unifycloudin/" target="_blank"><i class="icofont-pinterest"></i></a></li>
+                            <li><a title="Linkedn" href="https://www.linkedin.com/company/the-unified-cloud-pvt-ltd/about/" target="_blank"><i class="icofont-linkedin"></i></a></li>
+                            <li><a title="Talegram" href="https://t.me/unifycloudindia" target="_blank"><i class="icofont-telegram"></i></a></li>
+                            <li><a title="Youtube" href="https://www.youtube.com/@UnifyCloudIndia" target="_blank"><i class="icofont-brand-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 text-center text-md-start text-lg-start">
+                <div class="footer-widget footer-widget-2 mt-2">
+                    <h5 class="position-relative mb-5 widget-title">Quick Links</h5>
+                    <ul class="footer-nav">
+                        <li><a href="/contact">Support Center</a></li>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/career">Career</a></li>
+                        <li><a href="/become-seller">Become a Seller</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/cancellation-policy">Cancellation Policy</a></li>
+                        <li><a href="https://unifycloudindia.tawk.help" target="_blank">Knowledge Base</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 text-center text-md-start text-lg-start">
+                <div class="footer-widget footer-widget-3 mt-2">
+                    <h5 class="position-relative mb-5 widget-title">Services</h5>
+                    <ul class="footer-nav">
+                        <li><a href="/product-services">Cloud Services</a></li>
+                        <li><a href="/product-services/microsoft-teams">Microsoft Teams</a></li>
+                        <li><a href="/product-services/power-apps">Power Apps</a></li>
+                        <li><a href="/product-services/share-point">Share Point </a></li>
+                        <li><a href="/product-services/microsoft-365">Microsoft 365</a></li>
+                        <li><a href="/product-services/exchange">Exchange</a></li>
+                        <li><a href="/product-services/ms-projects">MS Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-8 text-center text-md-start text-lg-start">
+                <div class="footer-widget footer-sb-widget mt-2">
+                    <h5 class="position-relative mb-5 widget-title">Get In Touch</h5>
+                    <form action="#" [formGroup]="addSubsForm" (ngSubmit)="submitEnquery()" class="footer-sb-form position-relative">
+                        <input type="email" placeholder="Type Your Mail *" formControlName="emailID">
+                        <button type="submit" class="template-btn primary-btn btn-small">Subscribe</button>
+                        
+                    </form>
+                    <div class="text-danger" *ngIf="EmailID.errors?.['required'] && (EmailID.dirty || EmailID.touched)">
+                        Field is required
+                    </div>
+                    <div class="text-danger" *ngIf="EmailID.errors?.['email'] && (EmailID.dirty || EmailID.touched)">
+                        Invalid email id
+                    </div>
+                    <div *ngIf="WasSent" class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+                        You have subscribed successfully
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="ft-payment-method mt-4">
+                        <h5 class="position-relative ft-subtitle d-inline-block">We Accepted</h5>
+                        <ul class="payment-list d-flex align-items-center mt-3 m-0 p-0">
+                            <li class="d-inline-flex align-items-center justify-content-center"><img src="assets/img/logos/visa.png" alt="visa" class="img-fluid"></li>
+                            <li class="d-inline-flex align-items-center justify-content-center"><img src="assets/img/logos/mastercard.png" alt="mastercard" class="img-fluid"></li>
+                            <li class="d-inline-flex align-items-center justify-content-center" style="background-color: #fff;"><img src="assets/img/logos/rupay.png" alt="payoneer" class="img-fluid"></li>
+                            <li class="d-inline-flex align-items-center justify-content-center overflow-hidden"><img src="assets/img/logos/net-banking.webp" alt="paypal" class="img-fluid"></li>
+                            <li class="d-inline-flex align-items-center justify-content-center overflow-hidden"><img src="assets/img/logos/wallet.webp" alt="paypal" class="img-fluid"></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="footer-copyright">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-auto text-center text-md-start text-lg-start">
+                <div class="copyright-txt">
+                    <p class="mb-0">Copyright 2023 UnifyCloud. All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="copyright-txt">
+                    <p class="mb-0">{{appVersion}}</p>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div class="copyright-links row d-flex justify-content-center g-1">
+                    <div class="col-auto">
+                        <p class="mb-0"><a href="/terms-conditions">Terms &amp; Conditions</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <p class="mb-0"><a href="/privacy-policy" class="ms-3">Privacy Policy</a></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="vdoPopup" *ngIf="ShowPopup">
+    <div>
+        <a  (click)="hidevdoPop()"><i class="icofont-close-line-squared-alt"></i></a>
+        <iframe width="100%" height="506" src="https://www.youtube.com/embed/20L5EPnQKuQ" title="UnifyCloud Launching of Microsoft CSP Services and Solutions Announcement in India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>

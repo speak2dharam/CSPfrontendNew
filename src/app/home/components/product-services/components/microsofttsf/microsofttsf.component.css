@@ -1,0 +1,6 @@
+.accordion-item{
+    margin-bottom: 15px;
+}
+.accordion-item:first-of-type .accordion-button{
+    border-radius: 0%;
+}
