@@ -29,6 +29,8 @@ export class LtscPageComponent implements OnInit  {
   public cartOutPut:any=[];
   public PlaceOrderOutPut:any=[];
   public ProdCatgryOutput:any=[];
+  Isloading:boolean=false;
+  ItemFound:boolean=true;
   IsLeggedIn:boolean=false;
   selectedValues: { [key: number]: number } = {}; // To store selected values
   quantity: number=0;
@@ -134,6 +136,7 @@ export class LtscPageComponent implements OnInit  {
   }
 
   bindProductItems(minPrice:number,maxPrice:number,BillPlanID:string,SegmentID:string,categoryID:number){
+    this.Isloading=true;
     const dataArray={
       "ItemSlug": "",
       "CategoryID": categoryID,
@@ -148,9 +151,15 @@ export class LtscPageComponent implements OnInit  {
       this.ProdAddOutput=res;
       console.log(this.ProdAddOutput.length)
       if(this.ProdAddOutput.length>0){
+        this.Isloading=false;
+        this.ItemFound=true;
         for (let i = 1; i <= this.ProdAddOutput.length; i++) {
           this.selectedValues[i] = 1;
         }
+      }
+      else{
+        this.ItemFound=false;
+        this.Isloading=false;
       }
     });
   }
