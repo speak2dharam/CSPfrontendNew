@@ -16,6 +16,8 @@ import { ModernWorkplaceAssessmentComponent } from './components/modern-workplac
 import { AutomatedLandingZoneComponent } from './components/automated-landing-zone/automated-landing-zone.component';
 import { FiveRMigrationPlanningComponent } from './components/five-rmigration-planning/five-rmigration-planning.component';
 import { SustainabilityAssessmentComponent } from './components/sustainability-assessment/sustainability-assessment.component';
+import { GenerativeAiDataReadinessAssessmentComponent } from './components/generative-ai-data-readiness-assessment/generative-ai-data-readiness-assessment.component';
+import { ResponsiveAiAssessmentComponent } from './components/responsive-ai-assessment/responsive-ai-assessment.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { SustainabilityAssessmentComponent } from './components/sustainability-a
     ModernWorkplaceAssessmentComponent,
     AutomatedLandingZoneComponent,
     FiveRMigrationPlanningComponent,
-    SustainabilityAssessmentComponent
+    SustainabilityAssessmentComponent,
+    GenerativeAiDataReadinessAssessmentComponent,
+    ResponsiveAiAssessmentComponent
   ],
   imports: [
     CommonModule,

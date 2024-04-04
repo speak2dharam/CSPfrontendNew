@@ -13,6 +13,8 @@ import { ModernWorkplaceAssessmentComponent } from './components/modern-workplac
 import { AutomatedLandingZoneComponent } from './components/automated-landing-zone/automated-landing-zone.component';
 import { SustainabilityAssessmentComponent } from './components/sustainability-assessment/sustainability-assessment.component';
 import { FiveRMigrationPlanningComponent } from './components/five-rmigration-planning/five-rmigration-planning.component';
+import { GenerativeAiDataReadinessAssessmentComponent } from './components/generative-ai-data-readiness-assessment/generative-ai-data-readiness-assessment.component';
+import { ResponsiveAiAssessmentComponent } from './components/responsive-ai-assessment/responsive-ai-assessment.component';
 
 const routes: Routes = [
   { path: '', component: AssessmentsComponent },
@@ -27,7 +29,9 @@ const routes: Routes = [
   { path: 'modern-workplace-assessment', component: ModernWorkplaceAssessmentComponent },
   { path: 'automated-landing-zone', component: AutomatedLandingZoneComponent },
   { path: 'sustainability-assessment', component: SustainabilityAssessmentComponent },
-  { path: 'migration-5r-wave-planning', component: FiveRMigrationPlanningComponent }
+  { path: 'migration-5r-wave-planning', component: FiveRMigrationPlanningComponent },
+  { path: 'generative-ai-data-readiness-assessment', component: GenerativeAiDataReadinessAssessmentComponent },
+  { path: 'responsible-ai-assessment-services', component: ResponsiveAiAssessmentComponent }
 ];
 
 @NgModule({

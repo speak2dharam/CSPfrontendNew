@@ -8,8 +8,8 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class AzureComponent {
   constructor(private titleSrc:Title,private meta:Meta){
-    this.titleSrc.setTitle('Buy Microsoft Azure in India from Certified MS Partner - UnifyCloud');
-    this.meta.addTag({name:'description',content:'UnifyCloud is one of the best azure cloud solution providers in India at best price. Contact us for azure subscriptions or licenses at very competitive price.'});
+    this.titleSrc.setTitle('Buy Azure Subscription Plan Online from Microsoft Certified Partner in India');
+    this.meta.addTag({name:'description',content:"If you are planning to buy azure subscriptions from certified partner in India, then UnifyCloud is one of the best solutions for you. Get started on your digital transformation journey with UnifyCloud"});
     this.meta.addTag({name:'keywords',content:'Microsoft Azure, Azure Cloud, Azure Subscription cost'});
   }
   faq=[

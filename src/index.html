@@ -59,11 +59,39 @@
       woopra.track();
     </script>
     <!-- End of Woopra Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N8Z25S2');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8Z25S2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <!--scrolltop button -->
   <button class="scrolltop-btn"><i class="icofont-rounded-up"></i></button>
   <app-root></app-root>
+  <div class="modal fade" id="azureOfferModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="position-relative">
+            <img src="/assets/img/Azure-offer.jpg" class="img-fluid" alt="">
+            <a href="https://www.unifycloud.in/lets-talk" target="_blank" class="stretched-link"></a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- bootstrap@5.2.0 -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -73,6 +101,12 @@
     <script src="/assets/js/javascript.js"></script>
     <script src="/assets/libs/wow/wow.min.js"></script>
     <script src="/assets/libs/owl/owl.carousel.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            // alert("hii")
+            $("#azureOfferModal").modal('show')
+        });
+    </script>
     <script>
       new WOW().init();
       function showtestimonial(){
