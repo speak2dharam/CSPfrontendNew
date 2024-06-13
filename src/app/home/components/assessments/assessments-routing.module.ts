@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'modern-workplace-assessment', component: ModernWorkplaceAssessmentComponent },
   { path: 'automated-landing-zone', component: AutomatedLandingZoneComponent },
   { path: 'sustainability-assessment', component: SustainabilityAssessmentComponent },
-  { path: 'migration-5r-wave-planning', component: FiveRMigrationPlanningComponent },
+  { path: 'migration-6r-wave-planning', component: FiveRMigrationPlanningComponent },
   { path: 'generative-ai-data-readiness-assessment', component: GenerativeAiDataReadinessAssessmentComponent },
   { path: 'responsible-ai-assessment-services', component: ResponsiveAiAssessmentComponent }
 ];
